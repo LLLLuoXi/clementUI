@@ -1,12 +1,17 @@
 /*
  * @Author: luoxi
- * @LastEditTime: 2022-04-09 21:18:15
+ * @LastEditTime: 2022-04-10 22:05:24
  * @LastEditors: your name
  * @Description: 
  */
 import { createApp } from 'vue'
 import App from './App.vue'
+// import Clment from "./plugins/clement"
+import { ClRow, ClCol } from "./plugins/clement"
 
-import "./assets/theme-chalk/display.scss"
-
-createApp(App).mount('#app')
+const app = createApp(App)
+// app.use(Clment).mount('#app')
+app
+  .use(ClRow)
+  .use(ClCol)
+  .mount('#app')

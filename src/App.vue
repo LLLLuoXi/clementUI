@@ -1,13 +1,13 @@
 <!--
  * @Author: luoxi
- * @LastEditTime: 2022-04-09 21:24:27
+ * @LastEditTime: 2022-04-10 21:41:29
  * @LastEditors: your name
  * @Description: 
 -->
 <template>
   <div class="app-container">
     <h1>基础布局</h1>
-    <cl-row>
+    <cl-row tag="p">
       <cl-col :span="24"
         ><div class="grid-content bg-purple-dark"></div
       ></cl-col>
@@ -136,10 +136,10 @@
 </template>
 
 <script>
-import ClCol from "@clement/Col.vue";
-import ClRow from "@clement/Row.vue";
+// import ClCol from "@clement/Col.js";
+// import ClRow from "@clement/Row.js";
 export default {
-  components: { ClCol, ClRow },
+  // components: { ClCol, ClRow },
 };
 </script>
 
