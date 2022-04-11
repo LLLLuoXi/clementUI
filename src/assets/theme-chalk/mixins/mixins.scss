@@ -1,0 +1,38 @@
+@import "./config.scss";
+
+/**BEM
+---------------------------------*/
+@mixin b($block) {
+  $B:$namespace + '-' + $block;
+  @at-root{
+    .#{$B}{
+      @content;
+    }
+  }
+}
+
+// $modifier 是一个数组 (flex,black) -> &--flex,&--black
+@mixin m($modifier) {
+  // &--flex
+  $selector:&;
+  $currentSelector:'';
+  @each $unit in $modifier {
+    $currentSelector:$currentSelector+$selector+$modifier--separator +$unit+',';
+  }
+
+  @at-root{
+    #{$currentSelector}{
+      @content;  
+    }
+  }
+  // &--#{$modifier}{
+  //   @content;  
+  // }
+}
+
+@mixin when($state) {
+  // &.is-justify-end
+  &.#{$state-prefix + $state}{
+    @content;
+  }
+}

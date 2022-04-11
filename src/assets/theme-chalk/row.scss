@@ -1,14 +1,9 @@
-.cl-row {
-  &::after,
-  &::before {
-    display: block;
-    content: "";
-  }
-  &::after {
-    clear: both;
-  }
+@import "./mixins/mixins.scss";
+@import "./mixins/utils.scss";
 
-  &--flex {
+@include b(row) {
+  @include utils-clearfix;
+  @include m(flex) {
     display: flex;
     &::after,
     &::before {
@@ -16,24 +11,24 @@
     }
   }
   // 对其方式 justify
-  &.is-justify-end {
+  @include when(justify-end) {
     justify-content: flex-end;
   }
-  &.is-justify-center {
+  @include when(justify-center) {
     justify-content: center;
   }
-  &.is-justify-space-between {
+  @include when(justify-space-between) {
     justify-content: space-between;
   }
-  &.is-justify-space-around {
+  @include when(justify-space-around) {
     justify-content: space-around;
   }
 
-  &.is-align-middle {
+  @include when(align-middle) {
     align-items: center;
   }
 
-  &.is-align-bottom {
+  @include when(align-bottom) {
     align-items: flex-end;
   }
 }
