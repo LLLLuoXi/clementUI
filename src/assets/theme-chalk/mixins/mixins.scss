@@ -1,7 +1,9 @@
 @import "./config.scss";
+@import "../common/var.scss";
 
 /**BEM
----------------------------------*/
+---------------------------------**/
+
 @mixin b($block) {
   $B:$namespace + '-' + $block;
   @at-root{
@@ -17,7 +19,7 @@
   $selector:&;
   $currentSelector:'';
   @each $unit in $modifier {
-    $currentSelector:$currentSelector+$selector+$modifier--separator +$unit+',';
+    $currentSelector:$currentSelector+$selector+$modifier--separator + $unit + ',';
   }
 
   @at-root{
@@ -36,3 +38,17 @@
     @content;
   }
 }
+
+
+/**自适应临界断点
+---------------------------------**/
+
+@mixin res($key, $map: $--breakpoints) {
+  @if map-has-key($map, $key) {
+    @media only screen and #{inspect(map-get($map, $key))} {
+      @content;
+    }
+  } @else {
+    @warn "undefined points: `#{$map}`"
+  }
+};
