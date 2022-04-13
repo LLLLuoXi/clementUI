@@ -1,12 +1,12 @@
 <!--
  * @Author: luoxi
- * @LastEditTime: 2022-04-10 21:41:29
+ * @LastEditTime: 2022-04-13 23:26:50
  * @LastEditors: your name
  * @Description: 
 -->
 <template>
   <div class="app-container">
-    <h1>基础布局</h1>
+    <!-- <h1>基础布局</h1>
     <cl-row tag="p">
       <cl-col :span="24"
         ><div class="grid-content bg-purple-dark"></div
@@ -105,14 +105,6 @@
     </cl-row>
     <h1>响应式布局</h1>
     <cl-row :gutter="10">
-      <!-- <cl-col
-        :xs="{ span: 6, offset: 8, push: 7, pull: 9 }"
-        :sm="6"
-        :md="4"
-        :lg="3"
-        :xl="1"
-        ><div class="grid-content bg-purple">xs:object</div></cl-col
-      > -->
       <cl-col :xs="8" :sm="6" :md="4" :lg="3" :xl="1"
         ><div class="grid-content bg-purple"></div
       ></cl-col>
@@ -131,7 +123,12 @@
       <cl-col :xs="8" :sm="6" :md="4" :lg="3" :xl="1" class="hidden-xs-only">
         <div class="grid-content bg-purple"></div>
       </cl-col>
-    </cl-row>
+    </cl-row> -->
+    <cl-container>
+      <cl-header>Header</cl-header>
+      <cl-main>Main</cl-main>
+      <div>div</div>
+    </cl-container>
   </div>
 </template>
 
@@ -173,5 +170,41 @@ export default {
 .row-bg {
   padding: 10px 0;
   background-color: #f9fafc;
+}
+
+// container
+.cl-header,
+.cl-footer {
+  background-color: #b3c0d1;
+  color: #333;
+  text-align: center;
+  line-height: 60px;
+}
+
+.cl-aside {
+  background-color: #d3dce6;
+  color: #333;
+  text-align: center;
+  line-height: 200px;
+}
+
+.cl-main {
+  background-color: #e9eef3;
+  color: #333;
+  text-align: center;
+  line-height: 160px;
+}
+
+body > .cl-container {
+  margin-bottom: 40px;
+}
+
+.cl-container:nth-child(5) .cl-aside,
+.cl-container:nth-child(6) .cl-aside {
+  line-height: 260px;
+}
+
+.cl-container:nth-child(7) .cl-aside {
+  line-height: 320px;
 }
 </style>
