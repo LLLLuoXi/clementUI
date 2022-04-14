@@ -1,6 +1,6 @@
 <!--
  * @Author: luoxi
- * @LastEditTime: 2022-04-13 23:14:39
+ * @LastEditTime: 2022-04-14 21:46:48
  * @LastEditors: your name
  * @Description: 
 -->
@@ -33,18 +33,6 @@ export default {
             return name === "ClHeader" || name == "ClFooter";
           })
         : flase;
-
-      // if (this.$slots && this.$slots.default) {
-      //   return this.$slots.default().some((vNode) => {
-      //     const name = vNode.type.name;
-      //     if (name === "ClHeader" || name == "ClFooter") {
-      //       return true;
-      //     }
-      //   });
-      // } else {
-      //   // 没有插槽
-      //   return false;
-      // }
     },
   },
 };
