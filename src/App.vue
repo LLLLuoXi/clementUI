@@ -1,6 +1,6 @@
 <!--
  * @Author: luoxi
- * @LastEditTime: 2022-04-14 21:17:52
+ * @LastEditTime: 2022-04-14 21:59:33
  * @LastEditors: your name
  * @Description: 
 -->
@@ -16,7 +16,7 @@ import LayoutTest from "./views/test/LayoutT.vue";
 export default {
   data() {
     return {
-      testView: "ContainerTest",
+      testView: "LayoutTest",
     };
   },
   components: { ContainerTest, LayoutTest },
