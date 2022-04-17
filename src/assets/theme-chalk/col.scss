@@ -1,9 +1,5 @@
 @import "./mixins/mixins.scss";
 
-
-
-
-
 @include b(col) {
   box-sizing: border-box;
   float: left;
