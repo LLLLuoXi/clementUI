@@ -5,9 +5,9 @@
 ---------------------------------**/
 
 @mixin b($block) {
-  $B:$namespace + '-' + $block;
-  @at-root{
-    .#{$B}{
+  $B: $namespace + "-" + $block;
+  @at-root {
+    .#{$B} {
       @content;
     }
   }
@@ -16,29 +16,32 @@
 // $modifier 是一个数组 (flex,black) -> &--flex,&--black
 @mixin m($modifier) {
   // &--flex
-  $selector:&;
-  $currentSelector:'';
+  $selector: &;
+  $currentSelector: "";
   @each $unit in $modifier {
-    $currentSelector:$currentSelector+$selector+$modifier--separator + $unit + ',';
+    $currentSelector: $currentSelector +
+      $selector +
+      $modifier--separator +
+      $unit +
+      ",";
   }
 
-  @at-root{
-    #{$currentSelector}{
-      @content;  
+  @at-root {
+    #{$currentSelector} {
+      @content;
     }
   }
   // &--#{$modifier}{
-  //   @content;  
+  //   @content;
   // }
 }
 
 @mixin when($state) {
   // &.is-justify-end
-  &.#{$state-prefix + $state}{
+  &.#{$state-prefix + $state} {
     @content;
   }
 }
-
 
 /**自适应临界断点
 ---------------------------------**/
@@ -49,6 +52,6 @@
       @content;
     }
   } @else {
-    @warn "undefined points: `#{$map}`"
+    @warn "undefined points: `#{$map}`";
   }
-};
+} ;

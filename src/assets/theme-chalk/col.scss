@@ -3,21 +3,21 @@
 @include b(col) {
   box-sizing: border-box;
   float: left;
-};
+}
 @for $i from 0 through 24 {
   .cl-col-#{$i} {
-    width: $i/24 * 100%;
+    width: calc($i/24) * 100%;
   }
   .cl-col-offset-#{$i} {
-    margin-left: $i/24 * 100%;
+    margin-left: calc($i/24) * 100%;
   }
   .cl-col-push-#{$i} {
     position: relative;
-    left: $i/24 * 100%;
+    left: calc($i/24) * 100%;
   }
   .cl-col-pull-#{$i} {
     position: relative;
-    right: $i/24 * 100%;
+    right: calc($i/24) * 100%;
   }
 }
 
@@ -39,18 +39,18 @@
 @include res(xs) {
   @for $i from 0 through 24 {
     .cl-col-xs-#{$i} {
-      width: $i/24 * 100%;
+      width: calc($i/24) * 100%;
     }
     .cl-col-xs-offset-#{$i} {
-      margin-left: $i/24 * 100%;
+      margin-left: calc($i/24) * 100%;
     }
     .cl-col-xs-push-#{$i} {
       position: relative;
-      left: $i/24 * 100%;
+      left: calc($i/24) * 100%;
     }
     .cl-col-xs-pull-#{$i} {
       position: relative;
-      right: $i/24 * 100%;
+      right: calc($i/24) * 100%;
     }
   }
 }
@@ -62,18 +62,18 @@
 @include res(sm) {
   @for $i from 0 through 24 {
     .cl-col-sm-#{$i} {
-      width: $i/24 * 100%;
+      width: calc($i/24) * 100%;
     }
     .cl-col-sm-offset-#{$i} {
-      margin-left: $i/24 * 100%;
+      margin-left: calc($i/24) * 100%;
     }
     .cl-col-sm-push-#{$i} {
       position: relative;
-      left: $i/24 * 100%;
+      left: calc($i/24) * 100%;
     }
     .cl-col-sm-pull-#{$i} {
       position: relative;
-      right: $i/24 * 100%;
+      right: calc($i/24) * 100%;
     }
   }
 }
@@ -85,18 +85,18 @@
 @include res(md) {
   @for $i from 0 through 24 {
     .cl-col-md-#{$i} {
-      width: $i/24 * 100%;
+      width: calc($i/24) * 100%;
     }
     .cl-col-md-offset-#{$i} {
-      margin-left: $i/24 * 100%;
+      margin-left: calc($i/24) * 100%;
     }
     .cl-col-md-push-#{$i} {
       position: relative;
-      left: $i/24 * 100%;
+      left: calc($i/24) * 100%;
     }
     .cl-col-md-pull-#{$i} {
       position: relative;
-      right: $i/24 * 100%;
+      right: calc($i/24) * 100%;
     }
   }
 }
@@ -108,18 +108,18 @@
 @include res(lg) {
   @for $i from 0 through 24 {
     .cl-col-lg-#{$i} {
-      width: $i/24 * 100%;
+      width: calc($i/24) * 100%;
     }
     .cl-col-lg-offset-#{$i} {
-      margin-left: $i/24 * 100%;
+      margin-left: calc($i/24) * 100%;
     }
     .cl-col-lg-push-#{$i} {
       position: relative;
-      left: $i/24 * 100%;
+      left: calc($i/24) * 100%;
     }
     .cl-col-lg-pull-#{$i} {
       position: relative;
-      right: $i/24 * 100%;
+      right: calc($i/24) * 100%;
     }
   }
 }
@@ -131,18 +131,18 @@
 @include res(xl) {
   @for $i from 0 through 24 {
     .cl-col-xl-#{$i} {
-      width: $i/24 * 100%;
+      width: calc($i/24) * 100%;
     }
     .cl-col-xl-offset-#{$i} {
-      margin-left: $i/24 * 100%;
+      margin-left: calc($i/24) * 100%;
     }
     .cl-col-xl-push-#{$i} {
       position: relative;
-      left: $i/24 * 100%;
+      left: calc($i/24) * 100%;
     }
     .cl-col-xl-pull-#{$i} {
       position: relative;
-      right: $i/24 * 100%;
+      right: calc($i/24) * 100%;
     }
   }
 }

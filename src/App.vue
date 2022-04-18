@@ -1,6 +1,6 @@
 <!--
  * @Author: luoxi
- * @LastEditTime: 2022-04-17 21:49:23
+ * @LastEditTime: 2022-04-18 23:07:25
  * @LastEditors: your name
  * @Description: 
 -->
@@ -14,13 +14,14 @@
 import ContainerTest from "./views/test/ContainerT.vue";
 import LayoutTest from "./views/test/LayoutT.vue";
 import IconTest from "./views/test/IconT.vue";
+import ButtonTest from "./views/test/ButtonT.vue";
 export default {
   data() {
     return {
-      testView: "IconTest",
+      testView: "ButtonTest",
     };
   },
-  components: { ContainerTest, LayoutTest, IconTest },
+  components: { ContainerTest, LayoutTest, IconTest, ButtonTest },
 };
 </script>
 
