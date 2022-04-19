@@ -104,6 +104,10 @@ $--button-danger-background-color: $--color-danger !default; // #f56c6c
 $--button-danger-border-color: $--color-danger !default; // #f56c6c
 $--button-danger-font-color: $--color-white !default; // #fff
 
+$--button-disabled-background-color: #fff;
+$--button-disabled-boder-color: $--border-color-lighter;
+$--button-disabled-font-color: $--color-text-placeholder;
+
 $--button-active-shade-percent: 10% !default;
 $--button-hover-tint-percent: 20% !default;
 

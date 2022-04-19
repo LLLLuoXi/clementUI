@@ -8,6 +8,7 @@
   outline: none;
   margin: 0;
   transition-duration: 0.1s;
+  line-height: 1;
 
   border: $--border-base;
   background-color: $--button-default-background-color;
@@ -41,6 +42,29 @@
       $--color-primary,
       $--button-active-shade-percent
     );
+  }
+  // 圆角
+  @include when(round) {
+    border-radius: 20px;
+    padding-left: 23px;
+    padding-right: 23px;
+  }
+
+  // 圆形
+  @include when(circle) {
+    border-radius: 50%;
+    padding: $--button-padding-vertical;
+  }
+
+  // 禁用状态
+  @include when(disabled) {
+    &,
+    &.is-plain {
+      cursor: not-allowed;
+      background-color: $--button-disabled-background-color;
+      border-color: $--button-disabled-boder-color; // #ebeef5
+      color: $--button-disabled-font-color; // #c0c4cc
+    }
   }
 
   @include m(primary) {
