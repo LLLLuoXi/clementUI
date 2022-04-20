@@ -17,7 +17,13 @@
   padding: $--button-padding-vertical $--button-padding-horizontal;
   font-size: $--button-font-size;
   font-weight: $--button-font-weight;
-  border-radius: $--button-border-radius;
+  @include button-size(
+    $--button-padding-vertical,
+    $--button-padding-horizontal,
+    $--button-font-size,
+    $--button-border-radius
+  );
+  // border-radius: $--button-border-radius;
 
   @include utils-user-select(none);
 
@@ -43,6 +49,13 @@
       $--button-active-shade-percent
     );
   }
+
+  [class*="cl-icon-"] {
+    & + span {
+      margin-left: 5px;
+    }
+  }
+
   // 圆角
   @include when(round) {
     border-radius: 20px;
@@ -59,6 +72,7 @@
   // 禁用状态
   @include when(disabled) {
     &,
+    &:hover,
     &.is-plain {
       cursor: not-allowed;
       background-color: $--button-disabled-background-color;
@@ -104,6 +118,64 @@
       $--button-danger-background-color,
       $--button-danger-border-color,
       $--button-danger-font-color
+    );
+  }
+
+  // 文字按钮
+  @include m(text) {
+    padding-left: 0;
+    padding-right: 0;
+    border-color: transparent;
+    background-color: transparent;
+    color: $--color-primary;
+    &:hover {
+      background-color: transparent;
+      border-color: transparent;
+      color: mix(
+        $--color-white,
+        $--color-primary,
+        $--button-hover-tint-percent
+      );
+    }
+    &:active {
+      border-color: transparent;
+      background-color: transparent;
+      color: mix(
+        $--color-white,
+        $--color-primary,
+        $--button-active-shade-percent
+      );
+    }
+    &.is-disabled,
+    &.is-disabled:hover {
+      border-color: transparent;
+    }
+  }
+
+  @include m(medium) {
+    @include button-size(
+      $--button-medium-padding-vertical,
+      $--button-medium-padding-horizontal,
+      $--button-medium-font-size,
+      $--button-medium-border-radius
+    );
+  }
+
+  @include m(small) {
+    @include button-size(
+      $--button-small-padding-vertical,
+      $--button-small-padding-horizontal,
+      $--button-medium-font-size,
+      $--button-small-border-radius
+    );
+  }
+
+  @include m(mini) {
+    @include button-size(
+      $--button-mini-padding-vertical,
+      $--button-mini-padding-horizontal,
+      $--button-medium-font-size,
+      $--button-mini-border-radius
     );
   }
 }

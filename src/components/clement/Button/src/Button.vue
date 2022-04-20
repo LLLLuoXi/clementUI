@@ -1,6 +1,6 @@
 <!--
  * @Author: luoxi
- * @LastEditTime: 2022-04-19 21:28:03
+ * @LastEditTime: 2022-04-20 23:24:25
  * @LastEditors: your name
  * @Description: 
 -->
@@ -10,6 +10,7 @@
     class="cl-button"
     :class="[
       type ? `cl-button--${type}` : '',
+      size ? `cl-button--${size}` : '',
       {
         'is-plain': plain,
         'is-round': round,
@@ -18,8 +19,9 @@
       },
     ]"
   >
-    <i v-if="icon" :class="icon" />
-    <slot></slot>
+    <i v-if="icon && !loading" :class="icon" />
+    <i v-if="loading" class="cl-icon-loading" />
+    <span v-if="$slots.default"> <slot></slot></span>
   </button>
 </template>
 
@@ -33,6 +35,8 @@ export default {
     circle: Boolean,
     icon: String,
     disabled: Boolean,
+    loading: Boolean,
+    size: String,
   },
 };
 </script>

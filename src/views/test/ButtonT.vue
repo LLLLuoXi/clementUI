@@ -1,6 +1,6 @@
 <!--
  * @Author: luoxi
- * @LastEditTime: 2022-04-19 21:30:26
+ * @LastEditTime: 2022-04-20 23:24:52
  * @LastEditors: your name
  * @Description: Button组件测试页
 -->
@@ -58,6 +58,32 @@
       <cl-button type="info" plain disabled>信息按钮</cl-button>
       <cl-button type="warning" plain disabled>警告按钮</cl-button>
       <cl-button type="danger" plain disabled>危险按钮</cl-button>
+    </cl-row>
+    <h2>文字按钮</h2>
+    <cl-button type="text">文字按钮</cl-button>
+    <cl-button type="text" disabled>文字按钮</cl-button>
+    <h2>图标按钮</h2>
+    <cl-button type="primary" icon="cl-icon-edit"></cl-button>
+    <cl-button type="primary" icon="cl-icon-share"></cl-button>
+    <cl-button type="primary" icon="cl-icon-dclete"></cl-button>
+    <cl-button type="primary" icon="cl-icon-search">搜索</cl-button>
+    <cl-button type="primary"
+      >上传<i class="cl-icon-upload cl-icon--right"></i
+    ></cl-button>
+    <h2>loading</h2>
+    <cl-button type="primary" :loading="true">加载中</cl-button>
+    <h2>不同尺寸</h2>
+    <cl-row class="cl-row">
+      <cl-button>默认按钮</cl-button>
+      <cl-button size="medium">中等按钮</cl-button>
+      <cl-button size="small">小型按钮</cl-button>
+      <cl-button size="mini">超小按钮</cl-button>
+    </cl-row>
+    <cl-row>
+      <cl-button round>默认按钮</cl-button>
+      <cl-button size="medium" round>中等按钮</cl-button>
+      <cl-button size="small" round>小型按钮</cl-button>
+      <cl-button size="mini" round>超小按钮</cl-button>
     </cl-row>
   </div>
 </template>

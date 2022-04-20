@@ -15,6 +15,13 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.cl-icon--right {
+  margin-left: 5px;
+}
+.cl-icon--left {
+  margin-right: 5px;
+}
+
 .cl-icon-ice-cream-round:before {
   content: "\e6a0";
 }
