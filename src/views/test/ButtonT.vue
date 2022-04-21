@@ -1,6 +1,6 @@
 <!--
  * @Author: luoxi
- * @LastEditTime: 2022-04-20 23:24:52
+ * @LastEditTime: 2022-04-21 22:37:11
  * @LastEditors: your name
  * @Description: Button组件测试页
 -->
@@ -85,6 +85,27 @@
       <cl-button size="small" round>小型按钮</cl-button>
       <cl-button size="mini" round>超小按钮</cl-button>
     </cl-row>
+    <h2>按钮组</h2>
+    <cl-button-group class="m-r">
+      <cl-button type="primary" icon="cl-icon-arrow-left">上一页</cl-button>
+      <cl-button type="primary"
+        >下一页<i class="cl-icon-arrow-right cl-icon--right"></i
+      ></cl-button>
+    </cl-button-group>
+    <cl-button-group class="m-r">
+      <cl-button type="primary" icon="cl-icon-edit"></cl-button>
+      <cl-button type="primary" icon="cl-icon-share"></cl-button>
+      <cl-button type="primary" icon="cl-icon-dclete"></cl-button>
+    </cl-button-group>
+    <cl-button-group class="m-r">
+      <cl-button type="primary">只有一个按钮</cl-button>
+    </cl-button-group>
+    <cl-button-group class="m-r">
+      <cl-button type="primary" round>is round</cl-button>
+    </cl-button-group>
+    <cl-button-group class="m-r">
+      <cl-button type="primary" circle icon="cl-icon-dclete"></cl-button>
+    </cl-button-group>
   </div>
 </template>
 
@@ -95,5 +116,8 @@ export default {};
 <style lang="scss" scoped>
 .cl-row {
   margin-bottom: 30px;
+}
+.m-r {
+  margin-right: 10px;
 }
 </style>
