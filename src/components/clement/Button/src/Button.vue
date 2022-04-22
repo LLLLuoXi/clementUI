@@ -1,12 +1,14 @@
 <!--
  * @Author: luoxi
- * @LastEditTime: 2022-04-20 23:24:25
+ * @LastEditTime: 2022-04-22 22:59:30
  * @LastEditors: your name
  * @Description: 
 -->
 <template>
   <button
-    type="button"
+    :type="nativeType"
+    :autofocus="autofocus"
+    @click.native="(e) => $emit('click', e)"
     class="cl-button"
     :class="[
       type ? `cl-button--${type}` : '',
@@ -37,6 +39,11 @@ export default {
     disabled: Boolean,
     loading: Boolean,
     size: String,
+    autofocus: Boolean,
+    nativeType: {
+      type: String,
+      default: "button",
+    },
   },
 };
 </script>

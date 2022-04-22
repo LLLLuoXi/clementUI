@@ -1,6 +1,6 @@
 <!--
  * @Author: luoxi
- * @LastEditTime: 2022-04-21 22:37:11
+ * @LastEditTime: 2022-04-22 22:59:07
  * @LastEditors: your name
  * @Description: Button组件测试页
 -->
@@ -106,11 +106,33 @@
     <cl-button-group class="m-r">
       <cl-button type="primary" circle icon="cl-icon-dclete"></cl-button>
     </cl-button-group>
+    <h2>autofocus</h2>
+    <cl-button autofocus type="primary" round>autofocus</cl-button>
+    <cl-button type="primary" round>no autofocus</cl-button>
+    <h2>nativeType</h2>
+    <cl-button type="primary" nativeType="submit" round>submit</cl-button>
+    <h2>native click</h2>
+    <cl-button type="primary" @click="handleClick" round
+      >native click</cl-button
+    >
+    <p>
+      <q>
+        vue3点击监听器将被添加到 MyButton的根元素，即原生 button 元素。
+        当原生的button被点击时，会触发父组件的onClick方法。 如果原生
+        button已经有一个与 v-on 绑定的点击监听器，那么两个监听器都会触发
+      </q>
+    </p>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  methods: {
+    handleClick() {
+      console.log("clicked");
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>
