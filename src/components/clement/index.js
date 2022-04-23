@@ -1,6 +1,6 @@
 /*
  * @Author: luoxi
- * @LastEditTime: 2022-04-21 22:02:12
+ * @LastEditTime: 2022-04-23 22:36:30
  * @LastEditors: your name
  * @Description: clment启动文件
  */
@@ -14,6 +14,7 @@ import Aside from '@clement/Aside';
 import Icon from '@clement/Icon';
 import Button from '@clement/Button';
 import ButtonGroup from '@clement/ButtonGroup';
+import Link from '@clement/Link';
 
 const components = [
   ClRow,
@@ -25,7 +26,8 @@ const components = [
   Aside,
   Icon,
   Button,
-  ButtonGroup
+  ButtonGroup,
+  Link
 ]
 const install = (Vue) => {
   components.forEach(component => {
@@ -44,7 +46,8 @@ export default {
   Aside,
   Icon,
   Button,
-  ButtonGroup
+  ButtonGroup,
+  Link
 }
 // 按需导出
 export {
@@ -58,5 +61,6 @@ export {
   Aside,
   Icon,
   Button,
-  ButtonGroup
+  ButtonGroup,
+  Link
 }
