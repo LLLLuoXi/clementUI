@@ -16,6 +16,12 @@ $typeMap: (
   font-weight: $--link-font-weight;
   color: $--link-default-font-color;
   cursor: pointer;
+  [class*="cl-icon-"] {
+    & + span {
+      margin-left: 5px;
+    }
+  }
+
   &:hover {
     color: $--link-active-font-color;
   }
@@ -31,6 +37,12 @@ $typeMap: (
     }
   }
   @include when(disabled) {
+    cursor: not-allowed;
+    color: #c0c4cc;
+
+    // &:hover::after{
+
+    // }
   }
   @each $type, $color in $typeMap {
     @include m($type) {
@@ -42,6 +54,9 @@ $typeMap: (
         &:hover::after {
           border-bottom-color: $color;
         }
+      }
+      @include when(disabled) {
+        color: mix($--color-white, $color);
       }
     }
   }

@@ -1,6 +1,6 @@
 <!--
  * @Author: luoxi
- * @LastEditTime: 2022-04-23 23:28:50
+ * @LastEditTime: 2022-04-24 22:34:10
  * @LastEditors: your name
  * @Description: 
 -->
@@ -9,11 +9,12 @@
     class="cl-link"
     :class="[
       type ? `cl-link--${type}` : '',
-      { 'is-underline': underline, 'is-disabled': disabled },
+      { 'is-underline': underline && !disabled, 'is-disabled': disabled },
     ]"
     :href="href"
   >
-    <slot></slot>
+    <i v-if="icon" :class="icon"></i>
+    <span> <slot></slot></span>
   </a>
 </template>
 
@@ -28,6 +29,7 @@ export default {
     },
     type: String,
     disabled: Boolean,
+    icon: String,
   },
 };
 </script>
