@@ -1,6 +1,6 @@
 <!--
  * @Author: luoxi
- * @LastEditTime: 2022-04-22 22:59:07
+ * @LastEditTime: 2022-04-24 23:10:22
  * @LastEditors: your name
  * @Description: Button组件测试页
 -->
@@ -13,6 +13,7 @@
       <cl-button type="info">信息按钮</cl-button>
       <cl-button type="warning">警告按钮</cl-button>
       <cl-button type="danger">危险按钮</cl-button>
+      <cl-button type="danger1">危险按钮</cl-button>
     </cl-row>
 
     <cl-row class="cl-row">

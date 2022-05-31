@@ -4,13 +4,13 @@
  * @LastEditors: your name
  * @Description: component cl-col
  */
-import { h } from 'vue'
+import { h } from "vue";
 export default {
   name: "ClCol",
   props: {
     tag: {
       type: String,
-      default: 'div'
+      default: "div",
     },
     span: {
       type: Number,
@@ -93,9 +93,13 @@ export default {
     },
   },
   render() {
-    return h(this.tag, {
-      class: ['cl-col', this.offsetClassList, this.sizeClassList],
-      style: this.style
-    }, this.$slots.default())
-  }
+    return h(
+      this.tag,
+      {
+        class: ["cl-col", this.offsetClassList, this.sizeClassList],
+        style: this.style,
+      },
+      this.$slots.default()
+    );
+  },
 };

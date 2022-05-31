@@ -1,16 +1,16 @@
 /*
  * @Author: luoxi
- * @LastEditTime: 2022-04-10 21:17:05
+ * @LastEditTime: 2022-05-31 23:08:37
  * @LastEditors: your name
  * @Description: component cl-row
  */
-import { h } from 'vue'
+import { h } from "vue";
 export default {
   name: "ClRow",
   props: {
     tag: {
       type: String,
-      default: 'div'
+      default: "div",
     },
     gutter: {
       type: Number,
@@ -39,17 +39,26 @@ export default {
       return style;
     },
   },
-  render() {
-    console.log('h', h);
-    return h(this.tag, {
-      class: [
-        'cl-row',
-        { 'cl-row--flex': this.type === 'flex' },
-        this.justify !== 'start' && `is-justify-${this.justify}`,
-        this.align !== 'top' && `is-align-${this.align}`,
-      ],
-      style: this.style
-    }, this.$slots.default())
+  mounted() {
+    console.log('mounted');
+    console.log(typeof this.$slots.default);
+    console.log(this.$slots.default());
 
-  }
+  },
+  render() {
+    console.log("h", h);
+    return h(
+      this.tag,
+      {
+        class: [
+          "cl-row",
+          { "cl-row--flex": this.type === "flex" },
+          this.justify !== "start" && `is-justify-${this.justify}`,
+          this.align !== "top" && `is-align-${this.align}`,
+        ],
+        style: this.style,
+      },
+      this.$slots.default()
+    );
+  },
 };

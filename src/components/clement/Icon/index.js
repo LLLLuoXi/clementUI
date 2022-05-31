@@ -4,10 +4,10 @@
  * @LastEditors: your name
  * @Description: Container 组件入口文件
  */
-import Icon from './src/Icon.vue'
+import Icon from "./src/Icon.vue";
 
 Icon.install = (Vue) => {
-  Vue.component(Icon.name, Icon)
-}
+  Vue.component(Icon.name, Icon);
+};
 
 export default Icon;

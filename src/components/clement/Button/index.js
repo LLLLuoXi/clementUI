@@ -4,10 +4,10 @@
  * @LastEditors: your name
  * @Description: Container 组件入口文件
  */
-import Button from './src/Button.vue'
+import Button from "./src/Button.vue";
 
 Button.install = (Vue) => {
-  Vue.component(Button.name, Button)
-}
+  Vue.component(Button.name, Button);
+};
 
 export default Button;

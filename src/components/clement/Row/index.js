@@ -5,8 +5,8 @@
  * @Description: Row组件入口文件
  */
 
-import Row from './src/Row'
+import Row from "./src/Row";
 Row.install = (Vue) => {
-  Vue.component(Row.name, Row)
-}
-export default Row
+  Vue.component(Row.name, Row);
+};
+export default Row;

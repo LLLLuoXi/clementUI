@@ -1,14 +1,8 @@
-<!--
- * @Author: luoxi
- * @LastEditTime: 2022-04-14 21:07:33
- * @LastEditors: your name
- * @Description: Layout组件测试页
--->
 <template>
-  <div class="layout-test-container">
+  <div class="row-test-container">
     <h1>基础布局</h1>
-    <cl-row tag="p">
-      <cl-col :span="24"
+    <cl-row tag="h4">
+      <cl-col tag="p" :span="23"
         ><div class="grid-content bg-purple-dark"></div
       ></cl-col>
     </cl-row>
@@ -18,7 +12,38 @@
         ><div class="grid-content bg-purple-light"></div
       ></cl-col>
     </cl-row>
-    <h1>分栏布局</h1>
+    <cl-row>
+      <cl-col :span="8"><div class="grid-content bg-purple"></div></cl-col>
+      <cl-col :span="8"
+        ><div class="grid-content bg-purple-light"></div
+      ></cl-col>
+      <cl-col :span="8"><div class="grid-content bg-purple"></div></cl-col>
+    </cl-row>
+    <cl-row>
+      <cl-col :span="6"><div class="grid-content bg-purple"></div></cl-col>
+      <cl-col :span="6"
+        ><div class="grid-content bg-purple-light"></div
+      ></cl-col>
+      <cl-col :span="6"><div class="grid-content bg-purple"></div></cl-col>
+      <cl-col :span="6"
+        ><div class="grid-content bg-purple-light"></div
+      ></cl-col>
+    </cl-row>
+    <cl-row>
+      <cl-col :span="4"><div class="grid-content bg-purple"></div></cl-col>
+      <cl-col :span="4"
+        ><div class="grid-content bg-purple-light"></div
+      ></cl-col>
+      <cl-col :span="4"><div class="grid-content bg-purple"></div></cl-col>
+      <cl-col :span="4"
+        ><div class="grid-content bg-purple-light"></div
+      ></cl-col>
+      <cl-col :span="4"><div class="grid-content bg-purple"></div></cl-col>
+      <cl-col :span="4"
+        ><div class="grid-content bg-purple-light"></div
+      ></cl-col>
+    </cl-row>
+    <h1>分栏间隔</h1>
     <cl-row :gutter="20">
       <cl-col :span="6"><div class="grid-content bg-purple"></div></cl-col>
       <cl-col :span="6"><div class="grid-content bg-purple"></div></cl-col>
@@ -44,30 +69,22 @@
     <h1>分栏偏移</h1>
     <cl-row :gutter="20">
       <cl-col :span="6"><div class="grid-content bg-purple"></div></cl-col>
-      <cl-col :span="6" :offset="6"
-        ><div class="grid-content bg-purple">offset:6</div></cl-col
-      >
+      <cl-col :span="6" :offset="12"
+        ><div class="grid-content bg-purple"></div
+      ></cl-col>
     </cl-row>
     <cl-row :gutter="20">
-      <cl-col :span="6"><div class="grid-content bg-purple"></div></cl-col>
       <cl-col :span="6" :push="6"
-        ><div class="grid-content bg-purple">push:6</div></cl-col
-      >
+        ><div class="grid-content bg-purple"></div
+      ></cl-col>
+      <cl-col :span="6"><div class="grid-content bg-purple"></div></cl-col>
     </cl-row>
     <cl-row :gutter="20">
-      <cl-col :span="6" :offset="6"
-        ><div class="grid-content bg-purple"></div
-      ></cl-col>
-      <cl-col :span="6" :offset="6"
+      <cl-col :span="12" :pull="6"
         ><div class="grid-content bg-purple"></div
       ></cl-col>
     </cl-row>
-    <cl-row :gutter="20">
-      <cl-col :span="12" :offset="6"
-        ><div class="grid-content bg-purple"></div
-      ></cl-col>
-    </cl-row>
-    <h1>对其方式</h1>
+    <h1>对齐方式</h1>
     <cl-row type="flex" class="row-bg">
       <cl-col :span="6"><div class="grid-content bg-purple"></div></cl-col>
       <cl-col :span="6"
@@ -105,22 +122,22 @@
     </cl-row>
     <h1>响应式布局</h1>
     <cl-row :gutter="10">
-      <cl-col :xs="8" :sm="6" :md="4" :lg="3" :xl="1"
-        ><div class="grid-content bg-purple"></div
-      ></cl-col>
-      <cl-col :xs="4" :sm="6" :md="8" :lg="9" :xl="11"
-        ><div class="grid-content bg-purple-light"></div
-      ></cl-col>
-      <cl-col :xs="4" :sm="6" :md="8" :lg="9" :xl="11"
-        ><div class="grid-content bg-purple"></div
-      ></cl-col>
-      <cl-col :xs="8" :sm="6" :md="4" :lg="3" :xl="1"
-        ><div class="grid-content bg-purple-light"></div
-      ></cl-col>
+      <cl-col :xs="8" :sm="6" :md="4" :lg="3" :xl="1">
+        <div class="grid-content bg-purple"></div>
+      </cl-col>
+      <cl-col :xs="4" :sm="6" :md="8" :lg="9" :xl="11">
+        <div class="grid-content bg-purple-light"></div>
+      </cl-col>
+      <cl-col :xs="4" :sm="6" :md="8" :lg="9" :xl="11">
+        <div class="grid-content bg-purple"></div>
+      </cl-col>
+      <cl-col :xs="8" :sm="6" :md="4" :lg="3" :xl="1">
+        <div class="grid-content bg-purple-light"></div>
+      </cl-col>
     </cl-row>
     <h1>基于断点的隐藏类</h1>
     <cl-row :gutter="10">
-      <cl-col :xs="8" :sm="6" :md="4" :lg="3" :xl="1" class="hidden-xs-only">
+      <cl-col class="hidden-xs-only" :xs="8" :sm="6" :md="4" :lg="3" :xl="1">
         <div class="grid-content bg-purple"></div>
       </cl-col>
     </cl-row>
@@ -131,11 +148,7 @@
 export default {};
 </script>
 
-<style lang="scss" scoped>
-// .app-container {
-//   height: 100%;
-//   padding-bottom: 20%;
-// }
+<style lang="scss">
 .cl-row {
   margin-bottom: 20px;
   &:last-child {
@@ -161,41 +174,5 @@ export default {};
 .row-bg {
   padding: 10px 0;
   background-color: #f9fafc;
-}
-
-// container
-.cl-header,
-.cl-footer {
-  background-color: #b3c0d1;
-  color: #333;
-  text-align: center;
-  line-height: 60px;
-}
-
-.cl-aside {
-  background-color: #d3dce6;
-  color: #333;
-  text-align: center;
-  line-height: 200px;
-}
-
-.cl-main {
-  background-color: #e9eef3;
-  color: #333;
-  text-align: center;
-  line-height: 160px;
-}
-
-body > .cl-container {
-  margin-bottom: 40px;
-}
-
-.cl-container:nth-child(5) .cl-aside,
-.cl-container:nth-child(6) .cl-aside {
-  line-height: 260px;
-}
-
-.cl-container:nth-child(7) .cl-aside {
-  line-height: 320px;
 }
 </style>

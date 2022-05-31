@@ -4,10 +4,10 @@
  * @LastEditors: your name
  * @Description: Container 组件入口文件
  */
-import Aside from './src/Aside.vue'
+import Aside from "./src/Aside.vue";
 
 Aside.install = (Vue) => {
-  Vue.component(Aside.name, Aside)
-}
+  Vue.component(Aside.name, Aside);
+};
 
 export default Aside;

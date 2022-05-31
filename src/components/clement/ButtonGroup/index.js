@@ -2,12 +2,12 @@
  * @Author: luoxi
  * @LastEditTime: 2022-04-21 22:04:26
  * @LastEditors: your name
- * @Description: 
+ * @Description:
  */
-import ButtonGroup from './src/ButtonGroup.vue'
+import ButtonGroup from "./src/ButtonGroup.vue";
 
 ButtonGroup.install = (Vue) => {
-  Vue.component(ButtonGroup.name, ButtonGroup)
-}
+  Vue.component(ButtonGroup.name, ButtonGroup);
+};
 
-export default ButtonGroup
+export default ButtonGroup;

@@ -4,10 +4,10 @@
  * @LastEditors: your name
  * @Description: Container 组件入口文件
  */
-import Main from './src/Main.vue'
+import Main from "./src/Main.vue";
 
 Main.install = (Vue) => {
-  Vue.component(Main.name, Main)
-}
+  Vue.component(Main.name, Main);
+};
 
 export default Main;

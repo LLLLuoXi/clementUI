@@ -4,10 +4,10 @@
  * @LastEditors: your name
  * @Description: Container 组件入口文件
  */
-import Container from './src/Container.vue'
+import Container from "./src/Container.vue";
 
 Container.install = (Vue) => {
-  Vue.component(Container.name, Container)
-}
+  Vue.component(Container.name, Container);
+};
 
 export default Container;

@@ -4,10 +4,10 @@
  * @LastEditors: your name
  * @Description: Container 组件入口文件
  */
-import Footer from './src/Footer.vue'
+import Footer from "./src/Footer.vue";
 
 Footer.install = (Vue) => {
-  Vue.component(Footer.name, Footer)
-}
+  Vue.component(Footer.name, Footer);
+};
 
 export default Footer;

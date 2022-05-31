@@ -1,6 +1,6 @@
 <!--
  * @Author: luoxi
- * @LastEditTime: 2022-04-14 21:46:48
+ * @LastEditTime: 2022-05-31 21:56:09
  * @LastEditors: your name
  * @Description: 
 -->
@@ -32,11 +32,10 @@ export default {
             const name = vNode.type.name;
             return name === "ClHeader" || name == "ClFooter";
           })
-        : flase;
+        : false;
     },
   },
 };
 </script>
 
-<style>
-</style>
+<style></style>

@@ -1,14 +1,15 @@
 <!--
  * @Author: luoxi
- * @LastEditTime: 2022-04-22 22:59:30
+ * @LastEditTime: 2022-05-31 21:55:09
  * @LastEditors: your name
  * @Description: 
 -->
+<!--  eslint-disable-next-line -->
 <template>
   <button
     :type="nativeType"
     :autofocus="autofocus"
-    @click.native="(e) => $emit('click', e)"
+    @click="(e) => $emit('click', e)"
     class="cl-button"
     :class="[
       type ? `cl-button--${type}` : '',
@@ -31,7 +32,15 @@
 export default {
   name: "ClButton",
   props: {
-    type: String,
+    type: {
+      type: String,
+      default: "",
+      validator: (value) => {
+        return ["primary", "success", "info", "warning", "danger"].includes(
+          value
+        );
+      },
+    },
     plain: Boolean,
     round: Boolean,
     circle: Boolean,
@@ -48,5 +57,4 @@ export default {
 };
 </script>
 
-<style>
-</style>
+<style></style>
