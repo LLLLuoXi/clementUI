@@ -1,5 +1,6 @@
 @import "../common/var.scss";
 
+// button 变体（hover focus active plain disabled ）样式
 @mixin button-variant($backgroundColor, $borderColor, $fontColor) {
   color: $fontColor;
   background-color: $backgroundColor;
@@ -43,6 +44,7 @@
   }
 }
 
+// button 朴素按钮
 @mixin button-plain($color) {
   background-color: mix($--color-white, $color, 90%);
   border-color: mix($--color-white, $color, 60%);
@@ -69,6 +71,7 @@
   }
 }
 
+// button 文字大小 间距
 @mixin button-size(
   $padding-vertical,
   $padding-horizontal,

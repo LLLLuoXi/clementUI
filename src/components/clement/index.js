@@ -1,9 +1,10 @@
 /*
  * @Author: luoxi
- * @LastEditTime: 2022-04-23 22:36:30
+ * @LastEditTime: 2022-07-10 22:23:58
  * @LastEditors: your name
  * @Description: clment启动文件
  */
+
 import ClRow from "@clement/Row";
 import ClCol from "@clement/Col";
 import Container from "@clement/Container";
@@ -15,6 +16,7 @@ import Icon from "@clement/Icon";
 import Button from "@clement/Button";
 import ButtonGroup from "@clement/ButtonGroup";
 import Link from "@clement/Link";
+import Input from "@clement/Input";
 
 const components = [
   ClRow,
@@ -28,6 +30,7 @@ const components = [
   Button,
   ButtonGroup,
   Link,
+  Input,
 ];
 const install = (Vue) => {
   components.forEach((component) => {
@@ -48,6 +51,7 @@ export default {
   Button,
   ButtonGroup,
   Link,
+  Input,
 };
 // 按需导出
 export {
@@ -63,4 +67,5 @@ export {
   Button,
   ButtonGroup,
   Link,
+  Input,
 };

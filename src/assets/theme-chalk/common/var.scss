@@ -10,7 +10,8 @@ $--footer-padding: 0 20px !default;
 
 /* Color
 --------------------------*/
-$--color-primary: #409eff !default;
+// $--color-primary: #409eff !default;
+$--color-primary: #5755d9 !default;
 $--color-white: #ffffff !default;
 $--color-black: #000000 !default;
 $--color-primary-light-1: mix($--color-white, $--color-primary, 10%) !default;
@@ -24,15 +25,18 @@ $--color-primary-light-8: mix($--color-white, $--color-primary, 80%) !default;
 $--color-primary-light-9: mix($--color-white, $--color-primary, 90%) !default;
 
 // 辅助色
-$--color-success: #67c23a !default;
+// $--color-success: #67c23a !default;
+$--color-success: #32b643 !default;
 $--color-success-light: mix($--color-white, $--color-success, 80%) !default;
 $--color-success-lighter: mix($--color-white, $--color-success, 90%) !default;
 
-$--color-warning: #e6a13c !default;
+// $--color-warning: #e6a13c !default;
+$--color-warning: #ffb700 !default;
 $--color-warning-light: mix($--color-white, $--color-warning, 80%) !default;
 $--color-warning-lighter: mix($--color-white, $--color-warning, 90%) !default;
 
-$--color-danger: #f56c6c !default;
+// $--color-danger: #f56c6c !default;
+$--color-danger: #e85600 !default;
 $--color-danger-light: mix($--color-white, $--color-danger, 80%) !default;
 $--color-danger-lighter: mix($--color-white, $--color-danger, 90%) !default;
 
@@ -125,6 +129,12 @@ $--button-disabled-font-color: $--color-text-placeholder;
 
 $--button-active-shade-percent: 10% !default;
 $--button-hover-tint-percent: 20% !default;
+
+/* Input
+--------------------------*/
+$--input-disabled-background-color: $--border-color-lighter;
+$--input-disabled-boder-color: $--border-color-light;
+$--input-disabled-font-color: $--color-text-placeholder;
 
 /* Link
 --------------------------*/

@@ -1,6 +1,6 @@
 <!--
  * @Author: luoxi
- * @LastEditTime: 2022-05-31 23:32:37
+ * @LastEditTime: 2022-07-10 00:25:34
  * @LastEditors: your name
  * @Description: 
 -->
@@ -17,10 +17,11 @@ import IconTest from "./views/test/IconT.vue";
 import ButtonTest from "./views/test/ButtonT.vue";
 import LinkTest from "./views/test/LinkT.vue";
 import RowTest from "./views/test/RowT.vue";
+import InputTest from "./views/test/InputT.vue";
 export default {
   data() {
     return {
-      testView: "ButtonTest",
+      testView: "InputTest",
     };
   },
   components: {
@@ -30,6 +31,7 @@ export default {
     ButtonTest,
     LinkTest,
     RowTest,
+    InputTest,
   },
 };
 </script>
