@@ -1,0 +1,13 @@
+@import "../common/var.scss";
+
+// input 图标 hover
+@mixin input-icon-hover() {
+  & {
+    i {
+      cursor: pointer;
+      &:hover {
+        color: $--color-primary-light-3;
+      }
+    }
+  }
+}

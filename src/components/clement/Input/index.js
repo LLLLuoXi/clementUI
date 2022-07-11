@@ -1,13 +1,13 @@
 /*
  * @Author: luoxi
- * @LastEditTime: 2022-07-10 22:24:19
+ * @LastEditTime: 2022-07-11 01:32:16
  * @LastEditors: your name
  * @Description: 
  */
 
 import Input from "./src/Input.vue";
 
-console.log("Input", Input.install)
+// console.log("Input", Input.install)
 
 // Input.install = (Vue) => {
 //     console.log("Input.name", Input.name)
