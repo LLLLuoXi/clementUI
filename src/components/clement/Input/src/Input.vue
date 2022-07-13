@@ -1,6 +1,6 @@
 <!--
  * @Author: luoxi
- * @LastEditTime: 2022-07-11 18:32:12
+ * @LastEditTime: 2022-07-13 23:51:50
  * @LastEditors: your name
  * @Description: input 组件
 -->
@@ -30,6 +30,7 @@
 <script>
 export default {
   name: "ClInput",
+  inheritAttrs: false,
 };
 </script>
 
