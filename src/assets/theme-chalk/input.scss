@@ -41,7 +41,7 @@
     border-radius: 4px;
     padding: 0 8px;
     font-size: inherit;
-    transition: all 0.3s ease-in-out;
+    transition: all $--transition-duration $--transition-timing-function;
     box-sizing: border-box;
     &:hover {
       border-color: $--color-primary-light-3;

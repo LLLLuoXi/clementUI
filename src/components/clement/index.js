@@ -1,6 +1,6 @@
 /*
  * @Author: luoxi
- * @LastEditTime: 2022-07-10 22:23:58
+ * @LastEditTime: 2022-07-12 23:16:49
  * @LastEditors: your name
  * @Description: clment启动文件
  */
@@ -17,6 +17,7 @@ import Button from "@clement/Button";
 import ButtonGroup from "@clement/ButtonGroup";
 import Link from "@clement/Link";
 import Input from "@clement/Input";
+import Radio from "@clement/Radio";
 
 const components = [
   ClRow,
@@ -31,6 +32,7 @@ const components = [
   ButtonGroup,
   Link,
   Input,
+  Radio
 ];
 const install = (Vue) => {
   components.forEach((component) => {
@@ -52,6 +54,7 @@ export default {
   ButtonGroup,
   Link,
   Input,
+  Radio
 };
 // 按需导出
 export {
@@ -68,4 +71,5 @@ export {
   ButtonGroup,
   Link,
   Input,
+  Radio
 };

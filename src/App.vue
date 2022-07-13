@@ -1,6 +1,6 @@
 <!--
  * @Author: luoxi
- * @LastEditTime: 2022-07-11 16:58:35
+ * @LastEditTime: 2022-07-13 23:38:19
  * @LastEditors: your name
  * @Description: 
 -->
@@ -18,10 +18,11 @@ import ButtonTest from "./views/test/ButtonT.vue";
 import LinkTest from "./views/test/LinkT.vue";
 import RowTest from "./views/test/RowT.vue";
 import InputTest from "./views/test/InputT.vue";
+import RadioTest from "./views/test/RadioT.vue";
 export default {
   data() {
     return {
-      testView: "InputTest",
+      testView: "RadioTest",
     };
   },
   components: {
@@ -32,6 +33,7 @@ export default {
     LinkTest,
     RowTest,
     InputTest,
+    RadioTest,
   },
 };
 </script>

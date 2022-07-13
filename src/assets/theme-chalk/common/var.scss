@@ -8,6 +8,11 @@ $--main-padding: 0 20px !default;
 --------------------------*/
 $--footer-padding: 0 20px !default;
 
+/* Transition
+--------------------------*/
+$--transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+$--transition-duration: 0.3s;
+
 /* Color
 --------------------------*/
 // $--color-primary: #409eff !default;
@@ -139,6 +144,13 @@ $--button-hover-tint-percent: 20% !default;
 $--input-disabled-background-color: $--border-color-lighter;
 $--input-disabled-boder-color: $--border-color-light;
 $--input-disabled-font-color: $--color-text-placeholder;
+
+/* Radio
+--------------------------*/
+$--radio-disabled-background-color: $--border-color-lighter;
+$--radio-disabled-boder-color: $--border-color-light;
+$--radio-disabled-font-color: $--color-text-placeholder;
+$--radio-disabled-dot-color: $--color-text-secondary;
 
 /* Link
 --------------------------*/
